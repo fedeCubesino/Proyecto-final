@@ -608,7 +608,7 @@ margin: 1px;
     grid-template-rows: repeat(6, 1fr);
     grid-template-areas: 
     ". . . ."
-    "do tre un un"
+    "do tre . un"
     "do tre . ."
     "do tre . cua"
     ". . . ."
