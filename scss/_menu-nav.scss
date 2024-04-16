@@ -1,0 +1,146 @@
+ /** menu de navegacion*/
+
+    /**aca empieza el menu de navegacion*/
+
+    .menu {
+        width: 100%;
+        @include flex(row,center ,center );
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    .menu-vinos {
+        width: 100%;
+        @include flex(row,center ,center );
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    .menu-cerv {
+        width: 100%;
+        @include flex(row,center ,center );
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    .menu-club {
+        width: 100%;
+        @include flex(row,center ,center );
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    .menu-cont {
+        width: 100%;
+        @include flex(row,center ,center );
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    .menu-galeria {
+        width: 100%;
+        @include flex(row,center ,center );
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+.nav {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(54, 3, 29);
+    list-style: none;
+    padding: 5px;
+    margin-top: 0px;
+    @include flex(row,center ,center );
+    font-family: "Merriweather";
+    li {
+        @include flex(row,center ,center );
+        background-color: rgb(54, 3, 29);
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        margin: 2px;
+        transition: .1s ease;
+        &:hover {
+            scale: 1.05;
+            background-color: rgb(133, 106, 120);
+            border-radius: 2px;
+            box-shadow: 0px 0px 10px 0px rgba (0.0.0.5);
+        }
+        &:hover .submenu {
+            visibility: visible;
+            opacity: 100;
+            top: 32px;
+            z-index: 200;
+        }
+        
+            
+            .submenu {
+                position: absolute;
+                top: -100px;
+                height: 30px;
+                width: 100%;
+                list-style: none;
+                visibility: hidden;
+                opacity: 0;
+                z-index: 100;
+                transition: all .1s ease;
+                &::before {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-left: 12px solid transparent;
+                    border-right: 12px solid transparent;
+                    border-bottom: 12px solid white;
+                    position: absolute;
+                    top: -10px;
+                    left: 10px;
+                }
+                li {
+                    background-color: rgb(54, 3, 29);
+                    border-radius: 2px;
+                }
+            }
+        
+        a {
+            color: rgb(151, 151, 226);
+            position: relative;
+            text-decoration-line: none;
+            text-align: center;
+        }
+    }
+    label img {
+        width: 30px;
+        height: 20px;
+    }
+}
+.buscador {
+    display: flex;
+    height: 40px;
+    background-color: rgb(54, 3, 29);
+    
+    input {
+        width: 80%;
+        height: 100%;  
+        border-radius: 15px; 
+    }
+    img {
+        width: 15%;
+        height: 100%;
+        border: 2px solid;
+        border-radius: 20%;
+        margin-right: 10px;
+        background-color: rgb(54, 3, 29);
+        cursor: pointer;
+    }
+}
+
+.logo-car img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+
+
