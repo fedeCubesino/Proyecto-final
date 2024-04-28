@@ -7,35 +7,51 @@
     height:30vh;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    background-color: white;
     img{
         width: 30%;
-        height: 90%;
+        height: 100%;
         margin: 5px;
     }
 }
 .logo-cata {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(row,center ,center );
     img{
-        width: 90%;
+        background-color: map-get($colores, fondo );
+        width: 100%;
         height: 35%;
     }
 }
 
 article {
+    @include flex(column,center ,center );
     font-family:"Merriweather", serif ;
     font-size: larger;
+    background: rgba(158, 3, 119, 0.329);
+    
     ul {
         .list-art {
             list-style: none;
             padding: 20px;
-            margin: 20px;
+            margin: 10px;
             gap: 1.875rem;
-            
+            p {text-align: center;}
             }
         }
+    button {
+        width: 200px;
+        height: 50px;
+        align-self: center;
+        background-color: rgb(141, 67, 67);
+        opacity: 90%;
+        margin: 20px;
+            font-size: larger;
+            cursor: pointer;
+            &:hover {
+                scale: 1.1;
+                opacity: 100%;
+            }
+    }
 }
 
 
