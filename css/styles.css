@@ -169,7 +169,12 @@ body {
   display: grid;
   grid-template-columns: repeat 5, 1fr;
   grid-template-rows: repeat 6, 1fr;
-  grid-template-areas: "uno uno dos dos . " "tres tres tres cuatro . " "tres tres tres cuatro . " "tres tres tres . . " ". . . . . " ". . . . . "; }
+  grid-template-areas: "uno uno dos dos . "
+ "tres tres tres cuatro . "
+ "tres tres tres cuatro . "
+ "tres tres tres . . "
+ ". . . . . "
+ ". . . . . "; }
   .fo .contac {
     width: 100%;
     grid-area: uno;
@@ -190,7 +195,12 @@ body {
     display: grid;
     grid-template-columns: 40px repeat(3, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    grid-template-areas: ". . . ." "do tre un un" "do tre . cua" "do tre . ." ". . . ." ". . . ."; }
+    grid-template-areas: ". . . ."
+ "do tre un un"
+ "do tre . cua"
+ "do tre . ."
+ ". . . ."
+ ". . . ."; }
     .fo .redes p {
       font-size: small;
       color: #a79eb1;
@@ -1046,7 +1056,13 @@ article {
     display: grid;
     grid-template-columns: 25% 25% 50%;
     grid-template-rows: 40px 20% 20% 20% 40%;
-    grid-template-areas: "uno uno dos" "tres tres tres" "tres tres tres" "tres tres tres" ". . cuatro"; }
+
+    grid-template-areas: "uno uno dos"
+ "tres tres tres"
+ "tres tres tres"
+ "tres tres tres"
+ ". . cuatro"; }
+
   .contacto p {
     font-size: 30px; }
   .tex-1 p {
@@ -1108,6 +1124,7 @@ article {
 
 /** aca cominza resaponsiv 425px*/
 @media (max-width: 425px) {
+
   .carrusel {
     width: 90%;
     height: 250px;
@@ -1116,6 +1133,7 @@ article {
       left: 15%; }
   .slider2 {
     width: 100%; }
+
   .section-2 {
     height: 800px;
     flex-direction: column; }
@@ -1138,7 +1156,14 @@ article {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 40px 30% 40px 40px 10% 40%;
-    grid-template-areas: "uno dos" "tres tres" "tres tres" ". ." ". ." "cuatro cuatro"; }
+
+    grid-template-areas: "uno dos"
+ "tres tres"
+ "tres tres"
+ ". ."
+ ". ."
+ "cuatro cuatro"; }
+
   .redes {
     grid-area: tres;
     position: absolute;
@@ -1150,7 +1175,13 @@ article {
     display: grid;
     grid-template-columns: 40px repeat(3, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    grid-template-areas: ". . . ." "do tre . ." "do tre . ." "do tre cua ." ". . . ." "un un . ."; }
+    grid-template-areas: ". . . ."
+ "do tre . ."
+ "do tre . ."
+ "do tre cua ."
+ ". . . ."
+ "un un . ."; }
+
   .contacto p {
     font-size: 30px; }
   .tex-1 p {
@@ -1345,9 +1376,19 @@ article {
   .fo {
     grid-template-columns: repeat 2, 1fr;
     grid-template-rows: repeat 6, 1fr;
-    grid-template-areas: "uno uno " "tres tres " "tres tres " "tres tres " "dos dos " "cuatro cuatro "; }
+    grid-template-areas: "uno uno "
+ "tres tres "
+ "tres tres "
+ "tres tres "
+ "dos dos "
+ "cuatro cuatro "; }
     .fo .redes {
       height: 280px;
       grid-template-columns: 40px 1fr;
       grid-template-rows: repeat(6, 1fr);
-      grid-template-areas: "do tre " "do tre " "do tre " "cua cua " "un un " ". . "; } }
+      grid-template-areas: "do tre "
+ "do tre "
+ "do tre "
+ "cua cua "
+ "un un "
+ ". . "; } }
