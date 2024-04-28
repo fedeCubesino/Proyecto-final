@@ -3,55 +3,41 @@
 /** slider de visita nuestras sucursales*/
 
 
-.slider { 
+.carrusel {
+    width: 80%;
+    height: 300px;
+    overflow: hidden;
     position: relative;
-    width: 100%;
-    height: 400px;
-    @include flex(row,center ,center );
-    .slider-div {
+    left: 10%;
+    h3 {z-index: 5;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    color: #dad7db ;}
+    div {
+        
+        position: relative;
         width: 100%;
-        height: 400px;
-        margin-top: 2%;
+        height: 300px;
+        display: flex;
+        align-items: center;
         overflow: hidden;
-        text-align: center;
-        h3 {
-            font-family:"Merriweather", serif;
-            color: #220502;
-            font-size: 30px;
-            position: absolute;
-            top: 10%;
-            left: 30%;
-        }
-        ul {
-            @include flex(row,center ,center );
-            animation: slide 10s infinite ease-in-out;
-            width: 300%;
-            height: 350px;
-            li {
-                list-style: none;
-                width: 100%;
-                img {
-                    object-fit: cover;
-                    width: 100%;
-                    height: 100%;
+        .img-carrusel {width: 100%;
+            height: 100%;}
+            .flechas{
+                position: absolute;
+                display: flex;
+                justify-content: space-between;
+            a {
+                z-index: 10;
+                
+                p {
+                    color: #dbd0cf ;
+                    font-size: 32px;
+                    margin: 5px;
+                }
                 }
             }
-        }
-    }
-    @keyframes slide {
-    
-        0% {margin-left: 0%;}
-        25% {margin-left: 0%;}
-    
-        30% {margin-left: -100%;}
-        60% {margin-left: -100%;}
-    
-        65% {margin-left: -200%;}
-        95% {margin-left: -200%;}
-    
-        95% {margin-left: -200%}
-        100% {margin-left: -200%}
-    
     }
 }
 
@@ -59,15 +45,15 @@
 
 .seccion-ofertas {
     
-    width: 100%;
+    width: 95vw;
     height: 500px;
     @include flex(column,none ,center );
     object-fit: contain;
     
     h3 {
         position: absolute;
-        left: 30%;
-        color:#350a06 ;
+        left: 35%;
+        color:#dbd0cf ;
         font-size: 30px;
         animation: ofert 1s linear infinite;
     }
@@ -80,13 +66,12 @@
     }
     .slider2 {
         position: relative;
-        width: 100vw;
+        width: 95vw;
         height: 500px;
         @include flex(column,center ,center );
         padding: 10px;
         margin: 5px;
         .slider-box {
-            
             width: 100%;
             max-width: 600px;
             height: 100%;
@@ -193,7 +178,7 @@
 
 .section-2 {
     width: 100%;
-    height: 30%;
+    height: 250px;
     @include flex(row,center ,center );
     background-color: rgb(253, 253, 253);
     object-fit: contain;
@@ -263,42 +248,12 @@
 .cursos {
     width: 100%;
     height: 800px;
+    margin-top: 2px;
     display: grid;
-    position: relative;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    object-fit: fill;
-    .once {
-        
-        grid-column: 3 / 7;
-        grid-row: 1 / 4;
-        order: 3;
-    } 
-    .doce {
-        
-        grid-column: 2 / 5;
-        grid-row: 3 / 5;
-        order: 5;
     
-    }
-    .trece {
-        
-        grid-column: 1 / 4;
-        grid-row: 4 / 7;
-        order: 4;
-    }
-    .catorce {
-       
-        grid-column: 4 / 7;
-        grid-row: 3 / 7;
-        order: 6;
-    }
-    .diez {
-        
-        grid-column: 1 / 4;
-        grid-row: 1 / 4;
-        order: 1;
-    }
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    object-fit: fill;
     img { 
         width: 100%;
         height: 100%;
@@ -309,13 +264,38 @@
         animation-timeline: view();
         animation-range: entry 30px;
     }
-    @keyframes fade-in {
-        to {opacity: 1; scale: 1;
+    .diez {
+        grid-column: 1 / 4;
+        grid-row: 1 / 4;
+        order: 1;
     }
+    .once {
+        grid-column: 4 / 7;
+        grid-row: 1 / 4;
+        order: 3;
+    } 
+    .doce {
+        grid-column: 1 / 7;
+        grid-row: 4 / 7;
+        order: 5;
     }
-    .cursos img:hover {
-        z-index: 10;
+    .trece {
         
+        grid-column: 1 / 4;
+        grid-row: 7 / 10;
+        order: 4;
     }
+    .catorce {
+        grid-column: 4 / 7;
+        grid-row: 7 / 10;
+        order: 6;
+    }
+}
+@keyframes fade-in {
+    to {opacity: 1; scale: 1;
+}
+}
+.cursos img:hover {
+    z-index: 10;
 }
 

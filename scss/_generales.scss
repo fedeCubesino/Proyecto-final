@@ -9,6 +9,7 @@
 $background-color: rgb(133, 26, 81);
 $color: #e0b0ff;
 $colores: (
+    iconos: #552504,
     fondo: #240544,
     letras-H: #e0b0ff,
     letras-P: red,
@@ -242,20 +243,26 @@ body {
         "do tre . ."
         ". . . ."
         ". . . .";
-        a {
+        p {
             font-size:small;
             color: #a79eb1;
+            cursor: pointer;
         }
         .tag {
             grid-area: un;
-            img {
-                position: relative;
+            @include flex(row,center ,center );
+            text-decoration-color: #a79eb1;
+            font-style: $color;
+            .bi-credit-card {
+                margin: 5px;
+                cursor: pointer;
             }
         }
         .iconos {
             grid-area: do;
             margin: 10px;
         }
+        
         .tex-1 {
             grid-area: tre;
             li {
@@ -270,7 +277,11 @@ body {
         }
         .redes-sociales {
             grid-area: cua;
-            img {
+            .bi-twitter {
+                cursor: pointer;
+                margin: 10px;
+            }
+            .bi-facebook {
                 cursor: pointer;
                 margin: 10px;
             }

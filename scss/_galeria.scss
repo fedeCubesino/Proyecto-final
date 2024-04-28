@@ -29,18 +29,20 @@
                 
         }
         h2 {
-            grid-column: 3 / 8;
+            text-align: center;
+            grid-column: 3 / 7;
             grid-row: 1 / 2;
             order: 1;
         }
         h3 {
+            text-align: center;
             font-size: 30px;
             color: #330905;
             grid-column: 3 / 7;
             grid-row: 10 / 11;
             order: 5;
             z-index: 3;
-            animation: ocultar 2s linear 1s;
+            animation: ocultar 4s linear 2s;
             animation-timeline: view();
             
             @keyframes ocultar {
@@ -56,12 +58,12 @@
         }
         .imagen-2 {
             grid-column: 5 / 9;
-            grid-row: 5 / 9;
+            grid-row: 6 / 9;
             order: 3;
         }
         .imagen-3 {
             grid-column: 1 / 5;
-            grid-row: 5 / 9;
+            grid-row: 6 / 9;
             order: 4;
         }
         .imagen-4 {

@@ -201,13 +201,21 @@ body {
  "do tre . ."
  ". . . ."
  ". . . ."; }
-    .fo .redes a {
+    .fo .redes p {
       font-size: small;
-      color: #a79eb1; }
+      color: #a79eb1;
+      cursor: pointer; }
     .fo .redes .tag {
-      grid-area: un; }
-      .fo .redes .tag img {
-        position: relative; }
+      grid-area: un;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-decoration-color: #a79eb1;
+      font-style: #e0b0ff; }
+      .fo .redes .tag .bi-credit-card {
+        margin: 5px;
+        cursor: pointer; }
     .fo .redes .iconos {
       grid-area: do;
       margin: 10px; }
@@ -222,7 +230,10 @@ body {
           margin: 20px; }
     .fo .redes .redes-sociales {
       grid-area: cua; }
-      .fo .redes .redes-sociales img {
+      .fo .redes .redes-sociales .bi-twitter {
+        cursor: pointer;
+        margin: 10px; }
+      .fo .redes .redes-sociales .bi-facebook {
         cursor: pointer;
         margin: 10px; }
   .fo .maps {
@@ -377,7 +388,7 @@ body {
     border: 2px solid;
     border-radius: 20%;
     margin-right: 10px;
-    background-color: #36031d;
+    background-color: white;
     cursor: pointer; }
 
 .logo-car img {
@@ -387,64 +398,42 @@ body {
 
 /** aca comienza el index main*/
 /** slider de visita nuestras sucursales*/
-.slider {
+.carrusel {
+  width: 80%;
+  height: 300px;
+  overflow: hidden;
   position: relative;
-  width: 100%;
-  height: 400px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; }
-  .slider .slider-div {
+  left: 10%; }
+  .carrusel h3 {
+    z-index: 5;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    color: #dad7db; }
+  .carrusel div {
+    position: relative;
     width: 100%;
-    height: 400px;
-    margin-top: 2%;
-    overflow: hidden;
-    text-align: center; }
-    .slider .slider-div h3 {
-      font-family: "Merriweather", serif;
-      color: #220502;
-      font-size: 30px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    overflow: hidden; }
+    .carrusel div .img-carrusel {
+      width: 100%;
+      height: 100%; }
+    .carrusel div .flechas {
       position: absolute;
-      top: 10%;
-      left: 30%; }
-    .slider .slider-div ul {
       display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      animation: slide 10s infinite ease-in-out;
-      width: 300%;
-      height: 350px; }
-      .slider .slider-div ul li {
-        list-style: none;
-        width: 100%; }
-        .slider .slider-div ul li img {
-          object-fit: cover;
-          width: 100%;
-          height: 100%; }
-
-@keyframes slide {
-  0% {
-    margin-left: 0%; }
-  25% {
-    margin-left: 0%; }
-  30% {
-    margin-left: -100%; }
-  60% {
-    margin-left: -100%; }
-  65% {
-    margin-left: -200%; }
-  95% {
-    margin-left: -200%; }
-  95% {
-    margin-left: -200%; }
-  100% {
-    margin-left: -200%; } }
+      justify-content: space-between; }
+      .carrusel div .flechas a {
+        z-index: 10; }
+        .carrusel div .flechas a p {
+          color: #dbd0cf;
+          font-size: 32px;
+          margin: 5px; }
 
 /** ofertas de la semana*/
 .seccion-ofertas {
-  width: 100%;
+  width: 95vw;
   height: 500px;
   display: flex;
   flex-direction: column;
@@ -453,8 +442,8 @@ body {
   object-fit: contain; }
   .seccion-ofertas h3 {
     position: absolute;
-    left: 30%;
-    color: #350a06;
+    left: 35%;
+    color: #dbd0cf;
     font-size: 30px;
     animation: ofert 1s linear infinite; }
 
@@ -464,7 +453,7 @@ body {
     scale: 1.2; } }
   .seccion-ofertas .slider2 {
     position: relative;
-    width: 100vw;
+    width: 95vw;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -558,7 +547,7 @@ body {
 /** degustaciones*/
 .section-2 {
   width: 100%;
-  height: 30%;
+  height: 250px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -628,31 +617,11 @@ body {
 .cursos {
   width: 100%;
   height: 800px;
+  margin-top: 2px;
   display: grid;
-  position: relative;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(9, 1fr);
   object-fit: fill; }
-  .cursos .once {
-    grid-column: 3 / 7;
-    grid-row: 1 / 4;
-    order: 3; }
-  .cursos .doce {
-    grid-column: 2 / 5;
-    grid-row: 3 / 5;
-    order: 5; }
-  .cursos .trece {
-    grid-column: 1 / 4;
-    grid-row: 4 / 7;
-    order: 4; }
-  .cursos .catorce {
-    grid-column: 4 / 7;
-    grid-row: 3 / 7;
-    order: 6; }
-  .cursos .diez {
-    grid-column: 1 / 4;
-    grid-row: 1 / 4;
-    order: 1; }
   .cursos img {
     width: 100%;
     height: 100%;
@@ -662,13 +631,34 @@ body {
     animation: fade-in linear forwards;
     animation-timeline: view();
     animation-range: entry 30px; }
+  .cursos .diez {
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+    order: 1; }
+  .cursos .once {
+    grid-column: 4 / 7;
+    grid-row: 1 / 4;
+    order: 3; }
+  .cursos .doce {
+    grid-column: 1 / 7;
+    grid-row: 4 / 7;
+    order: 5; }
+  .cursos .trece {
+    grid-column: 1 / 4;
+    grid-row: 7 / 10;
+    order: 4; }
+  .cursos .catorce {
+    grid-column: 4 / 7;
+    grid-row: 7 / 10;
+    order: 6; }
 
 @keyframes fade-in {
   to {
     opacity: 1;
     scale: 1; } }
-  .cursos .cursos img:hover {
-    z-index: 10; }
+
+.cursos img:hover {
+  z-index: 10; }
 
 /** comienza pagina vinos*/
 .main-vinos {
@@ -815,28 +805,49 @@ body {
   height: 30vh;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; }
+  background-color: white; }
   .img-cata img {
     width: 30%;
-    height: 90%;
+    height: 100%;
     margin: 5px; }
 
 .logo-cata {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center; }
   .logo-cata img {
-    width: 90%;
+    background-color: #240544;
+    width: 100%;
     height: 35%; }
 
 article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: "Merriweather", serif;
-  font-size: larger; }
+  font-size: larger;
+  background: rgba(158, 3, 119, 0.329); }
   article ul .list-art {
     list-style: none;
     padding: 20px;
-    margin: 20px;
+    margin: 10px;
     gap: 1.875rem; }
+    article ul .list-art p {
+      text-align: center; }
+  article button {
+    width: 200px;
+    height: 50px;
+    align-self: center;
+    background-color: #8d4343;
+    opacity: 90%;
+    margin: 20px;
+    font-size: larger;
+    cursor: pointer; }
+    article button:hover {
+      scale: 1.1;
+      opacity: 100%; }
 
 /** comienza pagina contacto*/
 .contacto {
@@ -926,17 +937,19 @@ article {
     opacity: 1;
     scale: 1; } }
   .galeria h2 {
-    grid-column: 3 / 8;
+    text-align: center;
+    grid-column: 3 / 7;
     grid-row: 1 / 2;
     order: 1; }
   .galeria h3 {
+    text-align: center;
     font-size: 30px;
     color: #330905;
     grid-column: 3 / 7;
     grid-row: 10 / 11;
     order: 5;
     z-index: 3;
-    animation: ocultar 2s linear 1s;
+    animation: ocultar 4s linear 2s;
     animation-timeline: view(); }
 
 @keyframes ocultar {
@@ -949,11 +962,11 @@ article {
     order: 2; }
   .galeria .imagen-2 {
     grid-column: 5 / 9;
-    grid-row: 5 / 9;
+    grid-row: 6 / 9;
     order: 3; }
   .galeria .imagen-3 {
     grid-column: 1 / 5;
-    grid-row: 5 / 9;
+    grid-row: 6 / 9;
     order: 4; }
   .galeria .imagen-4 {
     grid-column: 6  / 9;
@@ -1015,24 +1028,19 @@ article {
     align-items: center; }
     .submenu-hamb li .submenu-hamb a {
       text-align: center; }
-  .slider {
-    height: 200px;
-    margin-top: 0px; }
-    .slider .slider-div {
-      width: 100%;
-      height: 100%; }
-      .slider .slider-div ul {
-        height: 200px; }
-        .slider .slider-div ul li {
-          object-fit: fill; }
-      .slider .slider-div h3 {
-        font-size: medium;
-        left: 5%; }
+  .carrusel {
+    width: 90%;
+    height: 250px;
+    left: 5%; }
+    .carrusel h3 {
+      left: 25%; }
   .seccion-ofertas {
-    width: 100vw; }
+    align-self: center;
+    width: 95%; }
     .seccion-ofertas h3 {
       font-size: large;
-      margin-top: 10px; }
+      margin-top: 10px;
+      left: 35%; }
     .seccion-ofertas .tarjetas p {
       scale: .7; }
     .seccion-ofertas .tarjeta img {
@@ -1048,21 +1056,21 @@ article {
     display: grid;
     grid-template-columns: 25% 25% 50%;
     grid-template-rows: 40px 20% 20% 20% 40%;
+
     grid-template-areas: "uno uno dos"
  "tres tres tres"
  "tres tres tres"
  "tres tres tres"
  ". . cuatro"; }
+
   .contacto p {
     font-size: 30px; }
   .tex-1 p {
     font-size: 12px; }
   .formulario {
     width: 80%; }
-  .img-cata {
-    background-image: url(../assets/img/wine-splash.webp); }
-    .img-cata .img-cata img {
-      width: 40%; }
+  .img-cata img {
+    width: 30%; }
   .principal-vinos .filtro {
     width: 100%;
     height: 60px;
@@ -1116,19 +1124,25 @@ article {
 
 /** aca cominza resaponsiv 425px*/
 @media (max-width: 425px) {
-  .slider-div h3 {
-    font-size: medium;
-    left: 15%;
-    top: 1%; }
+
+  .carrusel {
+    width: 90%;
+    height: 250px;
+    left: 5%; }
+    .carrusel h3 {
+      left: 15%; }
+  .slider2 {
+    width: 100%; }
+
   .section-2 {
     height: 800px;
     flex-direction: column; }
     .section-2 .degustaciones {
-      width: 100%; }
+      width: 95%; }
     .section-2 .pack-de-vinos {
-      width: 100%; }
+      width: 95%; }
     .section-2 .cristaleria {
-      width: 100%; }
+      width: 95%; }
     .section-2 div {
       width: 100%; }
   h4 {
@@ -1142,12 +1156,14 @@ article {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 40px 30% 40px 40px 10% 40%;
-    grid-template-areas: "uno uno"
+
+    grid-template-areas: "uno dos"
  "tres tres"
  "tres tres"
- "dos dos"
+ ". ."
  ". ."
  "cuatro cuatro"; }
+
   .redes {
     grid-area: tres;
     position: absolute;
@@ -1165,6 +1181,7 @@ article {
  "do tre cua ."
  ". . . ."
  "un un . ."; }
+
   .contacto p {
     font-size: 30px; }
   .tex-1 p {
@@ -1184,43 +1201,17 @@ article {
           margin: 10px; }
   .filtro-cerv ul p {
     font-size: 10px; }
-  .cursos {
-    width: 100vw;
-    height: 800px;
-    display: grid;
-    position: relative;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    object-fit: fill; }
-    .cursos .once {
-      grid-column: 3 / 7;
-      grid-row: 1 / 4;
-      order: 3; }
-    .cursos .doce {
-      grid-column: 2 / 5;
-      grid-row: 3 / 5;
-      order: 5; }
-    .cursos .trece {
-      grid-column: 1 / 4;
-      grid-row: 4 / 7;
-      order: 4; }
-    .cursos .catorce {
-      grid-column: 4 / 7;
-      grid-row: 3 / 7;
-      order: 2; }
-    .cursos .diez {
-      grid-column: 1 / 4;
-      grid-row: 1 / 4;
-      order: 1; }
   .galeria {
     height: 3000px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 50px repeat(20, 1fr); }
     .galeria h2 {
-      grid-column: 1 / 3; }
+      grid-column: 1 / 5;
+      text-align: center; }
     .galeria h3 {
       font-size: 20px;
-      grid-column: 1 / 3;
+      text-align: center;
+      grid-column: 1 / 5;
       grid-row: 11 / 12; }
     .galeria .imagen-1 {
       grid-column: 1  / 5;
@@ -1253,13 +1244,7 @@ article {
     .galeria .imagen-8 {
       grid-column: 1 / 5;
       grid-row: 20 / 22;
-      order: 10; } }
-
-/* aca comienza resopnsiv 320*/
-@media (max-width: 320px) {
-  .slider .slider-div h3 {
-    font-size: medium;
-    left: 5%; }
+      order: 10; }
   .seccion-ofertas h3 {
     font-size: 12px;
     left: 20%; }
@@ -1293,7 +1278,17 @@ article {
     .seccion-ofertas .slider2 .slider-box .siguiente {
       opacity: 1; }
       .seccion-ofertas .slider2 .slider-box .siguiente img {
-        opacity: 1; }
+        opacity: 1; } }
+
+/* aca comienza resopnsiv 320*/
+@media (max-width: 320px) {
+  .carrusel {
+    width: 100%;
+    height: 250px;
+    left: 0px; }
+    .carrusel h3 {
+      left: 15%;
+      font-size: 12px; }
   .principal-vinos {
     flex-direction: column; }
     .principal-vinos .filtro {
@@ -1364,7 +1359,36 @@ article {
     .cursos img:active {
       width: 90vw;
       height: 90vh; }
-  .galeria h2 {
-    font-size: 20px; }
-  .galeria h3 {
-    font-size: 16px; } }
+  .galeria {
+    height: 1500px; }
+    .galeria h2 {
+      font-size: 16px; }
+    .galeria h3 {
+      font-size: 16px; }
+  .img-cata {
+    height: 600px;
+    flex-direction: column; }
+    .img-cata img {
+      width: 100%;
+      height: 30%; }
+  article {
+    font-size: medium; }
+  .fo {
+    grid-template-columns: repeat 2, 1fr;
+    grid-template-rows: repeat 6, 1fr;
+    grid-template-areas: "uno uno "
+ "tres tres "
+ "tres tres "
+ "tres tres "
+ "dos dos "
+ "cuatro cuatro "; }
+    .fo .redes {
+      height: 280px;
+      grid-template-columns: 40px 1fr;
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-areas: "do tre "
+ "do tre "
+ "do tre "
+ "cua cua "
+ "un un "
+ ". . "; } }
